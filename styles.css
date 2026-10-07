@@ -78,7 +78,41 @@ a {
 
 .page-shell {
     min-height: 100vh;
+    position: relative;
+    z-index: 1;
 }
+
+.particles {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particles span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(191, 219, 254, 0.9) 35%, rgba(139, 92, 246, 0.15) 75%, transparent 100%);
+    box-shadow: 0 0 16px rgba(191, 219, 254, 0.9), 0 0 26px rgba(139, 92, 246, 0.45);
+    animation: particleFloat linear infinite;
+    opacity: 0.75;
+}
+
+.particles span:nth-child(1) { left: 8%; top: 14%; animation-duration: 14s; }
+.particles span:nth-child(2) { left: 18%; top: 68%; animation-duration: 18s; }
+.particles span:nth-child(3) { left: 26%; top: 20%; animation-duration: 16s; }
+.particles span:nth-child(4) { left: 36%; top: 72%; animation-duration: 21s; }
+.particles span:nth-child(5) { left: 46%; top: 38%; animation-duration: 17s; }
+.particles span:nth-child(6) { left: 58%; top: 18%; animation-duration: 19s; }
+.particles span:nth-child(7) { left: 68%; top: 62%; animation-duration: 15s; }
+.particles span:nth-child(8) { left: 76%; top: 26%; animation-duration: 20s; }
+.particles span:nth-child(9) { left: 84%; top: 72%; animation-duration: 22s; }
+.particles span:nth-child(10) { left: 92%; top: 32%; animation-duration: 18s; }
+.particles span:nth-child(11) { left: 52%; top: 82%; animation-duration: 24s; }
+.particles span:nth-child(12) { left: 64%; top: 48%; animation-duration: 16s; }
 
 .container {
     width: min(1180px, calc(100% - 32px));
@@ -195,12 +229,25 @@ body.light-theme .site-header {
     content: "";
     position: absolute;
     inset: 8% 8% auto auto;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.35), transparent 60%);
-    filter: blur(18px);
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.42), rgba(59, 130, 246, 0.18) 40%, transparent 72%);
+    filter: blur(26px);
     pointer-events: none;
-    animation: pulseGlow 5s ease-in-out infinite alternate;
+    animation: pulseGlow 5.5s ease-in-out infinite alternate;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 2% auto auto 4%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.28), rgba(96, 165, 250, 0.14) 28%, transparent 68%);
+    filter: blur(30px);
+    pointer-events: none;
+    animation: snowPulse 7s ease-in-out infinite alternate;
 }
 
 .eyebrow {
@@ -568,6 +615,8 @@ section {
     border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.02);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: floatCard 7s ease-in-out infinite;
+    animation-delay: calc(var(--card-index, 0) * 140ms);
 }
 
 .skill-card:hover {
@@ -649,7 +698,7 @@ section {
     background: rgba(255, 255, 255, 0.02);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     animation: floatCard 7s ease-in-out infinite;
-    animation-delay: calc(var(--card-index, 0) * 0.25s);
+    animation-delay: calc(var(--card-index, 0) * 180ms);
 }
 
 .project-card:hover {
@@ -863,6 +912,24 @@ section {
     }
 }
 
+@keyframes particleFloat {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.8);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate3d(22px, -28px, 0) scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate3d(-10px, -60px, 0) scale(0.7);
+        opacity: 0;
+    }
+}
+
 @keyframes gradientBorder {
     0% {
         background-position: 0% 50%;
@@ -880,6 +947,21 @@ section {
     100% {
         transform: scale(1.18);
         opacity: 1;
+    }
+}
+
+@keyframes snowPulse {
+    0% {
+        transform: scale(0.9) translateY(12px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.08) translateY(-8px);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.16) translateY(8px);
+        opacity: 0.8;
     }
 }
 
