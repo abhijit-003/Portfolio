@@ -125,8 +125,8 @@ const renderSkills = () => {
   const skillsGrid = document.getElementById('skillsGrid');
   skillsGrid.innerHTML = skillGroups
     .map(
-      (skill) => `
-        <article class="skill-card glass-card">
+      (skill, index) => `
+        <article class="skill-card glass-card" style="--card-index: ${index}">
           <h4>${skill.title}</h4>
           <p>${skill.description}</p>
           <div class="skill-tags">
@@ -144,8 +144,8 @@ const renderProjects = (filter = 'all') => {
 
   projectsGrid.innerHTML = filtered
     .map(
-      (project) => `
-        <article class="project-card">
+      (project, index) => `
+        <article class="project-card" style="--card-index: ${index}">
           <div class="project-media">
             <span class="project-badge">${project.category}</span>
           </div>
