@@ -237,16 +237,16 @@ const setupThemeToggle = () => {
   const button = document.getElementById('themeToggle');
   const savedTheme = localStorage.getItem('portfolioTheme');
 
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-    button.innerHTML = '<span class="toggle-icon">☀️</span>';
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    button.innerHTML = '<span class="toggle-icon">🌙</span>';
   }
 
   button.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('portfolioTheme', isDark ? 'dark' : 'light');
-    button.innerHTML = `<span class="toggle-icon">${isDark ? '☀️' : '🌙'}</span>`;
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('portfolioTheme', isLight ? 'light' : 'dark');
+    button.innerHTML = `<span class="toggle-icon">${isLight ? '🌙' : '☀️'}</span>`;
   });
 };
 
