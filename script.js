@@ -30,7 +30,7 @@ const skillGroups = [
 const projects = [
     {
   title: 'Treado',
-  category: 'fullstack',
+  category: 'BACKEND',
   description:
     'Full-stack trading platform built with Spring Boot and React, featuring JWT-based authentication, stock trading, wallet and transaction management, secure REST APIs, and MySQL persistence with external market-data integrations.',
   tags: [
@@ -95,17 +95,33 @@ const timeline = [
 const renderProfileLinks = () => {
   const container = document.getElementById('profileLinks');
   const links = [
-    { label: 'GitHub', href: profileData.github },
-    { label: 'GeeksforGeeks', href: profileData.geeksforgeeks },
-    { label: 'LeetCode', href: profileData.leetcode },
-    { label: 'LinkedIn', href: profileData.linkedin }
+    {
+      label: 'GitHub',
+      href: profileData.github,
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.47-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.04-1.15 3.04-1.15.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.29-2.61 5.23-5.1 5.5.4.34.75 1.02.75 2.06v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>'
+    },
+    {
+      label: 'GeeksforGeeks',
+      href: profileData.geeksforgeeks,
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 1 0 9.8 9.8A9.81 9.81 0 0 0 12 2.2Zm0 2.1a7.7 7.7 0 1 1-7.7 7.7A7.71 7.71 0 0 1 12 4.3Zm-3.8 4v2h4.2a2 2 0 0 1 1.8 1H9v2h5.2a2 2 0 0 1-1.8 1H8.2v2h4.2a4 4 0 0 0 3.9-3h1.5v-2h-1.5a4 4 0 0 0-3.9-3Z"/></svg>'
+    },
+    {
+      label: 'LeetCode',
+      href: profileData.leetcode,
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3.2 9.1 9.3a3.8 3.8 0 0 0 0 5.4l1.1 1.1-1.5 1.5-1.1-1.1a5.9 5.9 0 0 1 0-8.4l6.1-6.1Zm-4.3 15.2 1.5-1.5 1.1 1.1a3.8 3.8 0 0 0 5.4 0l1.5 1.5a5.9 5.9 0 0 1-8.4 0Zm-1-7.5h9.7v2.1H9.9Z"/></svg>'
+    },
+    {
+      label: 'LinkedIn',
+      href: profileData.linkedin,
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.2 18H5.8V9.6h2.4ZM7 8.5a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8ZM18.2 18h-2.4v-4.1c0-1 0-2.2-1.4-2.2s-1.6 1.1-1.6 2.1V18h-2.4V9.6h2.3v1.1h.1a2.6 2.6 0 0 1 2.3-1.3c2.5 0 3 1.6 3 3.7Z"/></svg>'
+    }
   ];
 
   container.innerHTML = links
     .map(
       (link) => `
-        <a class="profile-link" href="${link.href}" target="_blank" rel="noreferrer">
-          ${link.label}
+        <a class="profile-link" href="${link.href}" target="_blank" rel="noreferrer" aria-label="${link.label}" title="${link.label}">
+          ${link.icon}<span>${link.label}</span>
         </a>
       `
     )
@@ -115,7 +131,9 @@ const renderProfileLinks = () => {
   footerLinks.innerHTML = links
     .map(
       (link) => `
-        <a href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>
+        <a href="${link.href}" target="_blank" rel="noreferrer" aria-label="${link.label}" title="${link.label}">
+          ${link.icon}
+        </a>
       `
     )
     .join('');
