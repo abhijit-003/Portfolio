@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.findMatchBackground": "#ffb454",
+        "editor.findMatchBorder": "#ff8800",
+        "editor.findMatchHighlightBackground": "#264f78",
+        "editor.findMatchHighlightBorder": "#3794ff",
+        "editor.selectionBackground": "#094771",
+        "editor.selectionForeground": "#ffffff",
+        "editorOverviewRuler.findMatchForeground": "#f3900f",
+        "editorOverviewRuler.selectionHighlightForeground": "#3794ff"
+    }
+}

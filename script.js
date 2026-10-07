@@ -1,95 +1,94 @@
 const profileData = {
-  name: 'Your Name',
-  email: 'your.email@example.com',
-  github: 'https://github.com/yourusername',
-  geeksforgeeks: 'https://www.geeksforgeeks.org/user/yourusername/',
-  leetcode: 'https://leetcode.com/yourusername/',
-  linkedin: 'https://www.linkedin.com/in/yourusername/'
+  name: 'Abhijit Chavan',
+  email: 'abhijitchavan005@gmail.com',
+  github: 'https://github.com/abhijit-003',
+  geeksforgeeks: 'https://www.geeksforgeeks.org/user/abhijit003/',
+  leetcode: 'https://leetcode.com/abhijit003/',
+  linkedin: 'https://www.linkedin.com/in/abhijit003/'
 };
 
 const skillGroups = [
   {
     title: 'Frontend',
     description: 'Crafting responsive interfaces with strong UX, performance, and accessibility in mind.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind']
+    tags: ['HTML', 'CSS', 'JavaScript']
   },
-  {
-    title: 'Backend',
-    description: 'Designing APIs and application logic with scalable service-oriented patterns.',
-    tags: ['Node.js', 'Express', 'REST APIs', 'MongoDB', 'PostgreSQL']
-  },
+  { title: 'Backend & APIs', 
+    description: 'Developing backend-oriented skills around APIs, application logic, databases, and scalable service design.', 
+    tags: ['REST APIs', 'Java', 'SQL', 'Backend Development'] },
   {
     title: 'DSA',
     description: 'Solving problems with structured thinking, optimization, and efficient algorithms.',
     tags: ['Arrays', 'Graphs', 'DP', 'Trees', 'Hashing']
   },
-  {
-    title: 'Tools',
-    description: 'Using modern tooling to accelerate development and improve collaboration.',
-    tags: ['Git', 'GitHub', 'Figma', 'Postman', 'VS Code']
-  }
+  { title: 'Software Engineering', 
+    description: 'Applying debugging, root-cause analysis, system thinking, and production problem solving to enterprise software.', 
+    tags: ['System Design', 'Debugging', 'Git',  'Postman', 'Linux'] 
+ } 
 ];
 
 const projects = [
-  {
-    title: 'Smart Task Manager',
-    category: 'fullstack',
-    description: 'A productivity dashboard with task tracking, filters, reminders, and analytics for daily planning.',
-    tags: ['React', 'Node', 'MongoDB'],
-    link: '#'
-  },
-  {
-    title: 'Portfolio Analytics',
-    category: 'frontend',
-    description: 'A clean dashboard for tracking portfolio metrics, engagement, and performance insights.',
-    tags: ['JavaScript', 'Chart.js', 'CSS'],
-    link: '#'
-  },
-  {
+    {
+  title: 'Treado',
+  category: 'fullstack',
+  description:
+    'Full-stack trading platform built with Spring Boot and React, featuring JWT-based authentication, stock trading, wallet and transaction management, secure REST APIs, and MySQL persistence with external market-data integrations.',
+  tags: [
+    'Java',
+    'Spring Boot',
+    'Spring Security',
+    'JWT',
+    'MySQL',
+    'React',
+    'REST API'
+  ],
+  link: 'https://github.com/abhijit-003/Treado'
+},
+{
+  title: 'NewsApp',
+  category: 'fullstack',
+  description:
+    'Java-based Android news application integrating REST APIs to deliver real-time, category-based news with user authentication, preference-based recommendations, and network image caching using Retrofit and Glide.',
+  tags: ['Java', 'Android', 'REST API', 'Retrofit', 'Glide'],
+  link: 'https://github.com/abhijit-003/NewsApp'
+},
+{
     title: 'Algorithm Vault',
     category: 'dsa',
     description: 'A collection of problem templates, strategies, and optimized solutions for interview preparation.',
-    tags: ['C++', 'DSA', 'Patterns'],
-    link: '#'
-  },
-  {
-    title: 'Campus Connect',
-    category: 'fullstack',
-    description: 'A platform that connects students, mentors, and events through a community-first experience.',
-    tags: ['Express', 'MongoDB', 'JWT'],
-    link: '#'
-  },
-  {
-    title: 'Weather Now',
-    category: 'frontend',
-    description: 'A responsive weather app with location alerts, temperature trends, and a visual forecast UI.',
-    tags: ['API', 'UI/UX', 'Responsive'],
-    link: '#'
-  },
-  {
-    title: 'Code Sprint Tracker',
-    category: 'dsa',
-    description: 'A daily challenge tracker for progress monitoring, streaks, and retrospective improvement.',
-    tags: ['Python', 'Analytics', 'Automation'],
-    link: '#'
+    tags: ['Java', 'Python', 'DSA', 'Patterns'],
+    link: 'https://github.com/abhijit-003/LeetcodeJavaSolutions'
   }
+/*
+{
+  title: 'Image-to-PDF Converter Telegram Bot',
+  category: 'backend',
+  description:'Python Telegram bot for bidirectional image/PDF conversion, featuring asynchronous file processing, multi-step workflows, validation, error handling, and Telegram API integration.',
+  tags: ['Python', 'Telegram API', 'AsyncIO', 'Pillow', 'PDF Processing'],
+  link: 'https://github.com/abhijit-003/Image-to-PDF-Converter-Telegram-Bot'
+},  
+
+      { 
+        title: 'Task Manager Java Application', 
+        category: 'backend', 
+        description: 'Java-based task management web application built with JSP and Servlets, implementing server-side request handling, session management, and task management workflows.', 
+        tags: ['Java', 'JSP', 'Servlets', 'MVC'], 
+        link: 'https://github.com/abhijit-003/Task-Manager-Java-Application' 
+    }, 
+    { 
+        title: 'Social Problem Revealer', 
+        category: 'fullstack', 
+        description: 'Java web application for reporting and prioritizing local social issues, built with JSP, Servlets, and MySQL using MVC architecture, session management, and admin workflows.', 
+        tags: ['Java', 'JSP', 'Servlets', 'MySQL', 'MVC'], 
+        link: 'https://github.com/abhijit-003/Social-Problem-Revealer' 
+    } */
 ];
 
 const timeline = [
   {
-    period: '2024 — Present',
-    title: 'Software Developer',
-    detail: 'Building full-stack web solutions and improving design quality, architecture, and product thinking.'
-  },
-  {
-    period: '2023 — 2024',
-    title: 'Frontend Developer',
-    detail: 'Focused on responsive interfaces, component structure, and interactive user experiences across multiple projects.'
-  },
-  {
-    period: '2022 — 2023',
-    title: 'Problem Solver & Learner',
-    detail: 'Strengthened algorithmic thinking and development fundamentals while solving hundreds of coding challenges.'
+    period: '2025 — Present',
+    title: 'Product Analyst at PTC',
+    detail: 'Solving complex enterprise software problems through Java-based customization, debugging, system analysis, and root-cause investigation across FlexPLM and Windchill. Building a strong foundation in software engineering, backend development, system design, and scalable problem solving.'
   }
 ];
 
@@ -263,7 +262,20 @@ const setupNavigation = () => {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 };
+// To calculate experience in years and months
+const calculateExperience = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
 
+  const months =
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
+
+  return (months / 12).toFixed(1);
+};
+
+document.getElementById('experience').textContent =
+  `${calculateExperience('2025-04-10')}+ yrs`;
 const init = () => {
   document.getElementById('nameHighlight').textContent = profileData.name;
   renderProfileLinks();
