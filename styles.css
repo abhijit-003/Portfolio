@@ -217,12 +217,16 @@ body.light-theme .site-header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 52px;
+    min-height: 52px;
+    min-width: 180px;
+    width: 180px;
     padding: 0 22px;
     border-radius: 14px;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -327,14 +331,15 @@ body.light-theme .site-header {
 
 
 .avatar {
-    display: grid;
-    place-items: center;
+    display: block;
     width: 88px;
     height: 88px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
     background: rgba(15, 23, 42, 0.92);
-    font-weight: 800;
-    font-size: 1.8rem;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
 }
 
 .status-row {
@@ -708,7 +713,13 @@ section {
 .contact-actions {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     gap: 12px;
+}
+
+.contact-actions .btn {
+    width: 180px;
+    min-width: 180px;
 }
 
 .site-footer {
