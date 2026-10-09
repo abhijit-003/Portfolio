@@ -1122,6 +1122,22 @@ section {
         display: flex;
     }
 
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-visual {
+        order: 1;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .hero-copy {
+        order: 2;
+    }
+
     .hero-copy h1 {
         font-size: 2.6rem;
     }
